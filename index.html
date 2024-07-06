@@ -66,6 +66,18 @@
             list-style-type: disc;
             padding-left: 20px;
         }
+        .toggle-btn {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .toggle-btn:hover {
+            background-color: #555;
+        }
     </style>
 </head>
 <body>
@@ -86,7 +98,7 @@
             <p>Step 75</p>
         </section>
         
-        <section class="skills">
+        <section class="skills" id="skillsSection">
             <h2>Skills</h2>
             <ul>
                 <li>Proficient in various IT technologies and software.</li>
@@ -94,6 +106,8 @@
                 <li>Excellent communication and teamwork abilities.</li>
             </ul>
         </section>
+
+        <button class="toggle-btn" onclick="toggleSkills()">Show/Hide Skills</button>
         
         <section class="info">
             <div class="personal-info">
@@ -108,5 +122,16 @@
             </div>
         </section>
     </div>
+
+    <script>
+        function toggleSkills() {
+            const skillsSection = document.getElementById('skillsSection');
+            if (skillsSection.style.display === 'none' || skillsSection.style.display === '') {
+                skillsSection.style.display = 'block';
+            } else {
+                skillsSection.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
